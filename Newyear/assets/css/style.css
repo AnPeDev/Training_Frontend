@@ -1,0 +1,105 @@
+body {
+    margin: 0;
+}
+/* Делает для всех блоков уменьшение размера границы внутрь*/
+* {
+    box-sizing: border-box;
+}
+
+h1 {
+    font-family: 'Lobster', cursive;
+    font-size: 42px;
+    text-transform: uppercase;
+    margin-bottom: 0;
+    margin-top: 0;
+    padding-top: 30px;
+    }
+
+h3 {
+    font-family: 'Lobster', cursive;
+    font-size: 30px;
+    margin-top: 0;
+}
+
+p {
+    font-size: 18px;
+    font-family: 'Lobster', cursive;
+}
+
+
+img {
+    height: 300px;
+    width: 500px;
+}
+
+.new_year {
+    margin: 0;
+    background-image: linear-gradient(to right, #ff8177 0%, #ff867a 0%, #ff8c7f 21%, #f99185 52%, #cf556c 78%, #b12a5b 100%);
+    text-align: center;
+    height: 600px;
+}
+
+.button {
+    cursor: pointer; /*При наведении меняет курсор*/
+    margin: 20px;
+    background:rgb(219, 130, 119);
+}
+/*При наведении курсора hover происходит непрозрачность opacity*/
+.button:hover {
+    opacity: .5;
+}
+
+.merry {
+    margin: 0;
+    text-align:center;
+    height: 100vh;
+    background-color: rgb(219, 130, 119);
+    background-image: url(new_year.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    }
+
+.family {
+    border:rgb(120, 146, 153) solid 2px;
+    height: 150px;
+    width: 300px;
+    background-color: rgba(120, 146, 153, 0.5);
+    margin-left: 100px;
+    margin-bottom: 50px;
+    padding-top: 10px;
+    text-align: center;
+}
+
+.poems {
+    background-image: url(winter.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-align: center;
+    height: 100vh;
+    background-color:skyblue;
+}
+
+.poem {
+    display: inline-block;
+    border:rgb(120, 146, 153) solid 2px;
+    height: 150px;
+    width: 300px;
+    background-color: rgba(120, 146, 153, 0.5);
+    margin-left: 100px;
+    margin-bottom: 50px;
+    padding-top: 10px;
+    text-align: center;
+}
+
+.footer {
+    display: flex;
+    height: 30px;
+    background-color:aquamarine;
+
+}
+
+.footer-author {
+    margin: auto;
+}
