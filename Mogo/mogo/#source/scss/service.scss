@@ -1,0 +1,37 @@
+.service {
+  padding: 110px 0 85px 0;
+}
+
+.service-body {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.service-cards {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 65px 0 30px 0;
+}
+
+.service-cards-image {
+  margin: 0 20px 0 0;
+}
+
+.service-cards-body {
+  max-width: 290px;
+}
+
+.service-cards-body__title {
+  margin: 0 0 12px 0;
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #333;
+}
+
+.service-cards-body__text {
+  font-family: 'Roboto';
+  font-size: 15px;
+  color: #999;
+  line-height: 25px;
+}

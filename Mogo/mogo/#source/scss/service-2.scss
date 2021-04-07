@@ -1,0 +1,121 @@
+.service-2 {
+  padding: 110px 0 120px 0;
+}
+
+.service-2-text {
+  margin: 40px auto 85px auto;
+  max-width: 943px;
+  text-align: center;
+  font-family: 'Roboto';
+  font-size: 15px;
+  color: #999;
+  line-height: 26px;
+}
+
+.service-2-body {
+  display: flex;
+  justify-content: space-between;
+}
+
+.service-2-image {}
+
+.service-2-block {
+  flex: 1 1 50%;
+  max-width: 600px;
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.service-2-block__photo {
+  padding: 10px;
+  border: 1px solid #e5e5e5;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+
+  &::before {
+    content: '';
+    width: 30px;
+    height: 30px;
+    display: block;
+    background-image: url(../img/service-2/block/01.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  &::after {
+    content: '';
+    width: 30px;
+    height: 30px;
+    display: block;
+    background-image: url(../img/service-2/block/UP.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+}
+
+.service-2-block__creat {
+  padding: 10px;
+  border: 1px solid #e5e5e5;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+
+  &::before {
+    content: '';
+    width: 30px;
+    height: 30px;
+    display: block;
+    background-image: url(../img/service-2/block/02.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  &::after {
+    content: '';
+    width: 30px;
+    height: 30px;
+    display: block;
+    background-image: url(../img/service-2/block/DOWN.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+}
+
+.service-2-block__web {
+  padding: 10px;
+  border: 1px solid #e5e5e5;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+
+  &::before {
+    content: '';
+    width: 30px;
+    height: 30px;
+    display: block;
+    background-image: url(../img/service-2/block/03.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  &::after {
+    content: '';
+    width: 30px;
+    height: 30px;
+    display: block;
+    background-image: url(../img/service-2/block/DOWN.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+}

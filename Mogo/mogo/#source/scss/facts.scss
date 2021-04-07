@@ -1,0 +1,30 @@
+.facts {
+  background-color: #95e1d3;
+  color: #fff;
+}
+
+.facts-body {
+  display: flex;
+  justify-content: space-around;
+  padding: 86px 0;
+}
+
+.facts-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 240px;
+}
+
+.facts-column-body-num {
+  font-size: 72px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin: 0 0 14px 0;
+}
+
+.facts-column-body-text {
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #fff;
+}

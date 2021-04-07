@@ -1,0 +1,11 @@
+.quote-body {
+  display: flex;
+}
+
+.quote-body__image {
+  display: block;
+  width: 50px;
+  height: 50px;
+  padding: 20px;
+  border: 2px solid #000;
+}

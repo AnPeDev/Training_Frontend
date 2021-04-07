@@ -1,0 +1,101 @@
+// Обнуление ====================================================
+@import "null.scss";
+
+// Подключение шрифтов ==========================================
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:ital,wght@0,400;1,300&display=swap');
+
+@font-face {
+  font-family: 'Kaushan Script';
+  src: url('../fonts/Kaushan Script.eot');
+  src: local('☺'), url('../fonts/Kaushan Script.woff') format('woff'), url('../fonts/Kaushan Script.ttf') format('truetype'), url('../fonts/Kaushan Script.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+// Шрифт по умолчанию в переменную =============================
+$fontfamily: "Montserrat";
+
+// Переменные на адаптив ========================================
+$minwidth: 320px;
+$mw: 1200;
+$md1: $mw+12;
+$md2: 992.98;
+$md3: 767.98;
+$md4: 479.98;
+
+// Основная сетка и Адаптивная верстка ===========================
+.container {
+  max-width: $mw+px;
+  margin: 0 auto;
+  width: 100%;
+
+  @media (max-width:$md1+px) {
+    max-width: 970px;
+  }
+
+  @media (max-width:$md2+px) {
+    max-width: 750px;
+  }
+
+  @media (max-width:$md3+px) {
+    max-width: none;
+    padding: 0 10px;
+  }
+}
+
+// Оболочка =====================================================
+.wrapper {
+  width: 100%;
+  min-height: 100%;
+  overflow: hidden;
+}
+
+body {
+  font-family: $fontfamily;
+}
+
+// Основной блок ==========================================================================================================
+.title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title-top {
+  font-family: 'Kaushan Script';
+  font-size: 24px;
+  color: #333;
+  margin: 0 0 16px 0;
+}
+
+.title-body {
+  font-size: 30px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #333;
+  margin: 0 0 40px 0;
+}
+
+.title-line {
+  height: 3px;
+  width: 60px;
+  background-color: #f38181;
+}
+
+
+// Подключение файлов стилей ==============================================================================================
+@import "header.scss";
+@import "about_us.scss";
+@import "facts.scss";
+@import "service.scss";
+@import "feauture.scss";
+@import "service-2.scss";
+@import "quote.scss";
+@import "team.scss";
+@import "logos.scss";
+@import "work.scss";
+@import "testimonial.scss";
+@import "clients.scss";
+@import "blog.scss";
+@import "map.scss";
+@import "footer.scss";

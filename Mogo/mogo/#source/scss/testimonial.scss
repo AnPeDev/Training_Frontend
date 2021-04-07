@@ -1,0 +1,59 @@
+.testimonial {
+  background: #f8f8f8;
+  padding: 70px 0;
+}
+
+.testimonial-body {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &:before {
+    content: '';
+    width: 30px;
+    height: 30px;
+    margin: 0 0 0 20px;
+    background-image: url(/img/testimonial/left.svg);
+    background-repeat: no-repeat;
+  }
+
+  &:after {
+    content: '';
+    width: 30px;
+    height: 30px;
+    margin: 0 10px 0 0;
+    background-image: url(/img/testimonial/right.svg);
+    background-repeat: no-repeat;
+  }
+
+}
+
+.testimonial-body__image {
+  display: block;
+  padding: 40px;
+}
+
+.testimonial-body__text {
+  font-family: 'Roboto';
+  font-size: 24px;
+  font-style: italic;
+  color: #999;
+  max-width: 780px;
+  line-height: 40px;
+
+  p {
+    font-family: "Kaushan Script";
+    font-size: 24px;
+    color: #333;
+    display: flex;
+    align-items: center;
+
+    &::before {
+      content: '';
+      width: 60px;
+      height: 3px;
+      background: #f38181;
+      margin: 0 10px 0 0;
+    }
+  }
+}

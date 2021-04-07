@@ -1,0 +1,47 @@
+.team {
+  padding: 90px 0 120px 0;
+}
+
+.team-text {
+  margin: 48px auto 92px auto;
+  max-width: 950px;
+  text-align: center;
+  font-family: 'Roboto';
+  font-size: 15px;
+  color: #999;
+  line-height: 20px;
+}
+
+.team-cards {
+  display: flex;
+  justify-content: space-between;
+}
+
+.team-cards-column {}
+
+.team-cards__image {
+  margin: 0 0 30px 0;
+
+  &:hover {
+    transform: translate(-10px, -10px);
+    box-shadow: 10px 10px #95e1d3;
+    transition: .3s;
+  }
+}
+
+.team-cards__text {
+  text-align: center;
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #333;
+
+  p {
+    margin: 15px 0 0 0;
+    font-family: 'Roboto';
+    font-size: 15px;
+    font-style: italic;
+    color: #999;
+    text-transform: none;
+  }
+}

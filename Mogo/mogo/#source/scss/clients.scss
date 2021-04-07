@@ -1,0 +1,59 @@
+.clients {
+  padding: 110px 0 110px 0;
+  background-image: url(../img/clients/bg.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.clients-card {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 85px 0 0 0;
+}
+
+.clients-say {
+  flex: 1 1 50%;
+  display: flex;
+  height: 200px;
+
+  &__column {
+    margin: 0 0 0 30px;
+    max-width: 370px;
+  }
+}
+
+.clients-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+
+  &__name {
+    font-size: 14px;
+    text-transform: uppercase;
+    color: #333;
+  }
+
+  &__profi {
+    font-family: 'Roboto';
+    font-size: 15px;
+    font-style: italic;
+    color: #333;
+
+    &::after {
+      content: '';
+      margin: 17px 0 0 0;
+      display: block;
+      height: 3px;
+      width: 60px;
+      background-color: #f38181;
+    }
+  }
+
+  &__text {
+    font-family: 'Roboto';
+    font-size: 15px;
+    color: #999;
+    line-height: 24px;
+  }
+}

@@ -1,0 +1,117 @@
+.blog {
+  padding: 110px 0px 110px 0px;
+}
+
+.blog-cards {
+  margin: 45px 0 0 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.cards {
+  flex: 1 1 33.333%;
+  padding: 0 10px 0 10px;
+}
+
+.card {
+  position: relative;
+
+
+  &__image {
+    margin: 0 0 20px 0;
+  }
+
+  &__data {
+    position: absolute;
+    left: 0px;
+    top: 160px;
+    width: 60px;
+    height: 70px;
+    background-color: #95e1d3;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0 0 0;
+
+    &--num {
+      font-size: 30px;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+
+    &--text {
+      font-family: 'Roboto';
+      font-size: 15px;
+      font-style: italic;
+      line-height: 20px;
+    }
+
+  }
+
+  &__body {}
+}
+
+.card-content {
+  max-width: 100%;
+
+  &__title {
+    font-size: 14px;
+    text-transform: uppercase;
+    color: #333;
+    margin: 0 0 20px 0;
+  }
+
+  &__text {
+    font-family: 'Roboto';
+    font-size: 15px;
+    color: #999;
+    line-height: 20px;
+    margin: 0 0 20px 0;
+  }
+
+  &__line {
+    width: 100%;
+    height: 2px;
+    background-color: #e5e5e5;
+    margin: 0 0 20px 0;
+  }
+
+  &__like {}
+}
+
+.card-like {
+  font-family: 'Roboto';
+  font-size: 15px;
+  font-style: italic;
+  color: #999;
+  display: flex;
+  align-items: center;
+
+  &__glass {
+    margin: 0 15px 0 0;
+
+    &::before {
+      content: '';
+      margin: 0 5px 0 0;
+      display: inline-block;
+      width: 22px;
+      height: 15px;
+      background-image: url(../img/blog/VIEW.svg);
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+  }
+
+  &__message {
+
+    &::before {
+      content: '';
+      margin: 0 5px 0 0;
+      display: inline-block;
+      width: 22px;
+      height: 15px;
+      background-image: url(../img/blog/message.svg);
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+  }
+}

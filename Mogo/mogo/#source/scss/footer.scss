@@ -1,0 +1,201 @@
+.footer {
+  padding: 70px 0 30px 0;
+}
+
+.footer-columns {
+  display: flex;
+  justify-content: space-between;
+  column-gap: 50px;
+
+  &__form {
+    flex: 1 1 33.333%;
+  }
+
+  &__blogs {
+    flex: 1 1 33.333%;
+    margin: 0 100px 0 0;
+  }
+
+  &__instagram {
+    flex: 1 1 33.333%;
+  }
+}
+
+.footer-form {
+
+  &__title {
+    font-size: 46px;
+    font-weight: bold;
+    color: #ccc;
+    margin: 0 0 20px 0;
+  }
+
+  &__text {
+    font-family: 'Roboto';
+    font-size: 15px;
+    color: #999;
+    line-height: 24px;
+    margin: 0 0 20px 0;
+  }
+
+  &__follow {
+    color: #333;
+    font-size: 14px;
+    margin: 0 0 20px 0;
+
+    span {
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    &--line {
+      display: block;
+      height: 2px;
+      width: 100%;
+      background: #e5e5e5;
+      margin: 0 0 20px 0;
+    }
+  }
+
+  &__follows {
+    font-family: 'Roboto';
+    font-size: 15px;
+    font-style: italic;
+    color: #999;
+    display: flex;
+    margin: 0 0 30px 0;
+
+    ul {
+      display: flex;
+
+      li {
+        margin: 0 0 0 10px;
+      }
+    }
+  }
+
+  &__subscribe {}
+}
+
+.form-subscribe {
+
+
+  &__form {
+    display: flex;
+  }
+
+  &__line {}
+
+  &__button {}
+}
+
+.input {
+  height: 40px;
+  width: 230px;
+  font-family: 'Roboto';
+  font-size: 15px;
+  font-style: italic;
+  color: #ccc;
+  border: 2px solid #e5e5e5;
+}
+
+.btn {
+  height: 40px;
+  width: 150px;
+  background-color: #95e1d3;
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.footer-blogs {
+
+  &__title {
+    font-size: 14px;
+    text-transform: uppercase;
+    color: #333;
+    margin: 0 0 40px 0;
+  }
+
+  &__row {
+    display: flex;
+  }
+}
+
+.blog-row {
+
+  &__image {
+    padding: 0 20px 30px 0;
+  }
+
+  &__text {
+    font-size: 12px;
+    text-transform: uppercase;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    line-height: 20px;
+
+    span {
+      font-family: 'Roboto';
+      font-size: 13px;
+      font-style: italic;
+      color: #999;
+    }
+  }
+}
+
+.footer-instagram {
+
+
+  &__title {
+    font-size: 14px;
+    text-transform: uppercase;
+    color: #333;
+    margin: 0 0 40px 0;
+  }
+
+  &__images {
+    margin: 0 0 20px 0;
+  }
+
+  &__more {
+    font-family: 'Roboto';
+    font-size: 13px;
+    font-style: italic;
+    color: #333;
+  }
+}
+
+.images-inst {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  row-gap: 3px;
+  column-gap: 3px;
+
+  &__image {
+    object-fit: cover;
+  }
+}
+
+.footer-copy {
+
+  &__line {
+    width: 100%;
+    height: 3px;
+    background-color: #e5e5e5;
+    margin: 0 0 15px 0;
+  }
+
+  &__text {
+    text-align: center;
+    font-size: 14px;
+    color: #333;
+
+    span {
+      color: #f38181;
+    }
+  }
+}
