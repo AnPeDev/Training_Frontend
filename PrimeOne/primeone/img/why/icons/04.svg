@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="63" height="67" viewBox="0 0 63 67">
+  <defs>
+    <style>
+      .cls-1 {
+        filter: url(#filter);
+      }
+
+      .cls-2 {
+        fill: none;
+        stroke: #000;
+        stroke-width: 3px;
+        fill-rule: evenodd;
+      }
+    </style>
+    <filter id="filter" filterUnits="userSpaceOnUse">
+      <feFlood result="flood" flood-color="#fff"/>
+      <feComposite result="composite" operator="in" in2="SourceGraphic"/>
+      <feBlend result="blend" in2="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g class="cls-1">
+    <path id="Rounded_Rectangle_1" data-name="Rounded Rectangle 1" class="cls-2" d="M749.123,1648.93l17.812,17.7a6.931,6.931,0,0,1,0,9.84l-27.213,27.04a7.019,7.019,0,0,1-9.895,0l-17.812-17.7a6.919,6.919,0,0,1,0-9.83l27.212-27.05A7.039,7.039,0,0,1,749.123,1648.93Zm-9.023,33.25,0.156,16.86a6.89,6.89,0,0,1-7,6.96l-16.969-.15a7.208,7.208,0,0,1-7.134-7.09l-0.156-16.87a6.9,6.9,0,0,1,7-6.96l16.968,0.16A7.2,7.2,0,0,1,740.1,1682.18Zm-14.273,6.59a4.841,4.841,0,0,1,0,6.88,4.92,4.92,0,0,1-6.926,0,4.841,4.841,0,0,1,0-6.88A4.9,4.9,0,0,1,725.827,1688.77Z" transform="translate(-707.5 -1640.5)"/>
+    <path class="cls-2" d="M724.219,1698.33s-11.2-10.08-11.2-31.3,4.9-25.03,7-25.03,5.948,4.17,6.3,21.56" transform="translate(-707.5 -1640.5)"/>
+  </g>
+</svg>

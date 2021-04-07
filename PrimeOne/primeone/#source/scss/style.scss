@@ -1,0 +1,590 @@
+@import "null.scss";
+
+// Миксин для флекса
+@mixin flexbox() {
+  display: flex;
+  font-size: 0; // Убирает фантомные отступы
+}
+
+
+// Миксины для меню-бургер
+
+@mixin anim($time, $delay) {
+  transition: all $time ease $delay;
+}
+
+@mixin rotate($deg) {
+  transform: rotate($deg);
+}
+
+@mixin scale($num) {
+  transform: scale($num);
+}
+
+// Подключение шрифтов
+@font-face {
+  font-family: 'AkzidenzGrotesk';
+  src: url('../fonts/AkzidenzGrotesk-BoldCond.eot');
+  src: local('☺'), url('../fonts/AkzidenzGrotesk-BoldCond.woff') format('woff'), url('../fonts/AkzidenzGrotesk-BoldCond.ttf') format('truetype'), url('../fonts/AkzidenzGrotesk-BoldCond.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'BEBAS';
+  src: url('../fonts/BEBAS.eot');
+  src: local('☺'), url('../fonts/BEBAS.woff') format('woff'), url('../fonts/BEBAS.ttf') format('truetype'), url('../fonts/BEBAS.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans&display=swap');
+
+// Оболочка
+.wrapper {
+  width: 100%;
+  min-height: 100%;
+  overflow: hidden;
+}
+
+
+// Переменные
+$minwidth:320px;
+$mw:880;
+$md1:$mw+12;
+$md2:767.98; //992.98;
+$md3:767.98;
+$md4:479.98;
+
+// Основная сетка
+.container {
+  max-width: $mw+px;
+  margin: 0 auto;
+  width: 100%;
+
+  /*@media (max-width:$md1+px) {
+    max-width: 970px;
+  }
+
+  @media (max-width:$md2+px) {
+    max-width: 750px;
+  }
+
+  @media (max-width:$md3+px) {
+    max-width: none;
+    padding: 0 10px;
+  }*/
+
+  @media (max-width:$md1+px) {
+    max-width: 750px;
+  }
+
+  @media (max-width:$md2+px) {
+    max-width: none;
+    padding: 0 10px;
+  }
+}
+
+// Шрифт по умолчанию в переменную
+$fontfamily: "PT Sans";
+
+body {
+  font-family: $fontfamily;
+}
+
+// Кнопка
+.btn {
+  height: 50px;
+  line-height: 50px;
+  background: #000;
+  display: inline-block;
+  padding: 0 33px;
+  font-size: 15px;
+  font-family: 'BEBAS';
+  text-transform: uppercase;
+  color: #fff;
+  letter-spacing: 1.5px;
+
+  &--w {
+    background: #fff;
+    color: #000000;
+  }
+
+  //&:hover {}
+
+  // &.fw {
+  //   width: 100%;
+  // }
+}
+
+// Форма с классом Input
+input[type=text],
+input[type=email],
+input[type=tel],
+textarea {
+  appearance: none;
+}
+
+.input {
+  border-radius: 0 !important;
+  width: 100%;
+  display: block;
+  padding: 0 18px;
+  height: 50px;
+  border: 2px solid #959595;
+  background: #252525;
+  color: #959595;
+  font-size: 15px;
+
+  &:focus {}
+
+  &.err {
+    border: 2px solid red;
+  }
+}
+
+textarea.input {
+  resize: none;
+  height: 100px;
+  padding: 10px 18px;
+}
+
+// Основной блок =============================================
+.private {
+  display: flex;
+  background-color: #000;
+  margin: 0 0 75px 0;
+
+  @media (max-width:$md2+px) {
+    margin: 0 0 40px 0;
+  }
+
+  &__column {
+    flex: 0 0 50%;
+
+    @media (max-width:$md2+px) {
+      flex: 1 1 100%;
+
+      &:first-child {
+        display: none;
+      }
+    }
+  }
+
+  &__image {
+    height: 100%;
+
+    & img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+
+    }
+  }
+}
+
+.private-body-content {
+  max-width: 305px;
+}
+
+.private-body {
+  padding: 75px 20px 75px 60px;
+
+  @media (max-width:$md1+px) {
+    padding: 30px 20px 30px 30px;
+  }
+
+  &__title {
+    font-family: 'AkzidenzGrotesk';
+    font-size: 50px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: #fff;
+    margin: 0 0 30px 0;
+
+    @media (max-width:$md1+px) {
+      font-size: 35px;
+      margin: 0 0 20px 0;
+    }
+  }
+
+  &__text {
+    font-size: 15px;
+    line-height: 25px;
+    color: #fff;
+    margin: 0 0 50px 0;
+
+    @media (max-width:$md1+px) {
+      margin: 0 0 30px 0;
+    }
+  }
+}
+
+.private-body-buttons {
+  display: flex;
+  align-items: center;
+
+  //&__item {}
+
+  &__link {
+    font-family: 'BEBAS';
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 15px;
+    text-decoration: underline;
+    margin: 0 0 0 15px;
+    letter-spacing: 1.5px;
+  }
+}
+
+//=====================================================
+.products {
+  display: flex;
+  margin: 0 0 40px 0;
+
+  @media (max-width:$md2+px) {
+    margin: 0;
+  }
+
+  &__column {
+    flex: 0 0 25%;
+    margin: 0 0 40px 0;
+
+    @media (max-width:$md2+px) {
+      flex: 0 0 50%;
+    }
+
+    @media (max-width:380px) {
+      flex: 1 1 100%;
+    }
+  }
+}
+
+.products-body {
+  display: flex;
+  font-size: 0; // Убирает фантомные отступы
+
+  @media (max-width:$md2+px) {
+    flex-wrap: wrap;
+  }
+}
+
+.products-item {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+
+  &__image {
+    flex: 1 1 33.333%;
+    display: block;
+    height: 100%;
+    margin: 0 0 25px 0;
+
+    @media (max-width:380px) {
+      margin: 0 0 15px 0;
+    }
+
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+
+  }
+
+  &__title {
+    height: 50px;
+    overflow: hidden;
+    padding: 0 10px 0 0;
+    max-width: 185px;
+    display: block;
+    font-family: 'AkzidenzGrotesk';
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: #000;
+    font-size: 25px;
+    margin: 0 0 30px 0;
+
+    @media (max-width:380px) {
+      max-width: none;
+      height: auto;
+      overflow: visible;
+      margin: 0 0 20px 0;
+    }
+  }
+
+  &__text {
+    flex: 1 1 auto;
+    padding: 0 10px 0 0;
+    max-width: 185px;
+    font-size: 15px;
+    line-height: 25px;
+    margin: 0 0 25px 0;
+
+    @media (max-width:380px) {
+      max-width: none;
+      margin: 0 0 15px 0;
+    }
+  }
+
+  &__btn {
+    margin: 0 0 29px 0;
+  }
+
+  &__link {
+    font-family: 'BEBAS';
+    text-transform: uppercase;
+    color: #000;
+    font-size: 15px;
+    letter-spacing: 1.5px;
+    text-decoration: underline;
+  }
+}
+
+// =====================================
+.why {}
+
+.why-top {
+  @include flexbox();
+  background: #000;
+
+  &__column {
+    flex: 0 0 50%;
+
+    @media (max-width:$md1+px) {
+      flex: 1 1 100%;
+
+      &:last-child {
+        display: none;
+      }
+    }
+  }
+
+  &__text {
+    color: #fff;
+    text-align: right;
+    font-family: 'AkzidenzGrotesk';
+    font-size: 50px;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    padding: 55px 60px 55px 0;
+
+    @media (max-width:$md1+px) {
+      padding: 30px 0;
+      font-size: 40px;
+      text-align: center;
+    }
+
+    @media (max-width:$md2+px) {
+      padding: 20px 0;
+      font-size: 30px;
+      text-align: center;
+    }
+  }
+
+  &__image {
+    height: 100%;
+
+    & img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+.whu-body {
+  padding: 50px 0 0 0;
+  background: #ebebeb;
+
+  @media (max-width:$md4+px) {
+    padding: 30px 0 0 0;
+  }
+}
+
+.why-body-row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.why-body__column {
+  flex: 0 0 50%;
+  margin: 0 0 50px 0;
+
+  @media (max-width:$md1+px) {
+    flex: 1 1 100%;
+  }
+
+  @media (max-width:$md4+px) {
+    margin: 0 0 30px 0;
+  }
+}
+
+.why-body-item {
+  display: flex;
+
+  &__icon {
+    flex: 0 0 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #000;
+
+    @media (max-width:$md4+px) {
+      flex: 0 0 80px;
+      height: 80px;
+      padding: 15px;
+
+      img {
+        max-width: 100%;
+      }
+    }
+  }
+}
+
+.why-body-item-body {
+  flex: 1 1 100%;
+  padding: 0 0 0 11px;
+  display: flex;
+  flex-direction: column;
+
+
+  &__title {
+    flex: 1 1 auto;
+    font-family: 'AkzidenzGrotesk';
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    font-size: 25px;
+
+    @media (max-width:$md4+px) {
+      font-size: 20px;
+    }
+  }
+
+  &__text {
+    font-size: 15px;
+    padding: 0 15px 0 0;
+    line-height: 25px;
+  }
+}
+
+// =============================
+.contacts {
+  padding: 80px 0 0 0;
+
+  @media (max-width:$md2+px) {
+    padding: 30px 0 0 0;
+  }
+}
+
+.contacts-title {
+  font-family: 'AkzidenzGrotesk';
+  text-transform: uppercase;
+  font-size: 50px;
+  letter-spacing: 5px;
+  margin: 0 0 30px 0;
+}
+
+.contacts-body {
+  display: flex;
+  flex-wrap: wrap;
+
+  &__column {
+    flex: 0 0 50%;
+    margin: 0 0 20px 0;
+
+    @media (max-width:$md2+px) {
+      flex: 1 1 100%;
+    }
+  }
+
+  &__item {
+    font-size: 15px;
+    color: #000;
+    display: inline-block;
+    line-height: 27px;
+    padding: 0 0 0 35px;
+  }
+
+  &__item--1 {
+    background: url('/img/contacts/vv.svg') left no-repeat;
+  }
+
+  &__item--2 {
+    background: url('/img/contacts/email.svg') left no-repeat;
+  }
+
+  &__item--3 {
+    background: url('/img/contacts/telephone.svg') left no-repeat;
+  }
+}
+
+.contacts-social {
+  display: flex;
+
+  &__item {
+    margin: 0 30px 0 0;
+
+    &:last-child {
+      margin: 0
+    }
+  }
+}
+
+.contacts-content {
+  display: flex;
+  background: #000;
+
+  @media (max-width:$md2+px) {
+    display: block;
+  }
+
+  &__column {
+    flex: 0 0 50%;
+  }
+
+  &__map {
+    height: 100%;
+
+    @media (max-width:$md2+px) {
+      height: 300px;
+    }
+  }
+}
+
+.contacts-content-form {
+  padding: 55px 60px;
+
+  @media (max-width:$md2+px) {
+    padding: 30px;
+  }
+
+  &__title {
+    font-family: 'AkzidenzGrotesk';
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 25px;
+    letter-spacing: 5px;
+    margin: 0 0 30px 0;
+  }
+}
+
+.contacts-content-form-body {
+  max-width: 375px;
+
+  @media (max-width:$md2+px) {
+    max-width: none;
+  }
+}
+
+.contacts-content-form-line {
+  margin: 0 0 25px 0;
+}
+
+.contacts-content-form-button {}
+
+
+// Подключение файлов стилей
+@import "header.scss";
+@import "footer.scss";
