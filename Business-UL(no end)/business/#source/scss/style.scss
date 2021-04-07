@@ -1,0 +1,95 @@
+// Миксины ======================================================
+@import "mixin.scss";
+
+// Обнуление ====================================================
+@import "null.scss";
+
+// Подключение шрифтов ==========================================
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=PT+Serif:wght@400;700&display=swap');
+
+// Шрифт по умолчанию в переменную =============================
+$fontfamily: "Montserrat";
+
+// Переменные на адаптив ========================================
+$minwidth: 320px;
+$mw: 1170;
+$md1: $mw+12;
+$md2: 992.98;
+$md3: 767.98;
+$md4: 479.98;
+
+// Основная сетка и Адаптивная верстка ===========================
+html,
+body {
+  min-width: $minwidth;
+  position: relative;
+  color: #000;
+}
+
+body.lock {
+  overflow: hidden;
+
+  @media(max-width:$md3+px) {
+    width: 100%;
+    position: fixed;
+    overflow: hidden;
+  }
+}
+
+.container {
+  max-width: $mw+px;
+  margin: 0 auto;
+  width: 100%;
+
+  @media (max-width:$md1+px) {
+    max-width: 970px;
+  }
+
+  @media (max-width:$md2+px) {
+    max-width: 750px;
+  }
+
+  @media (max-width:$md3+px) {
+    max-width: none;
+    padding: 0 10px;
+  }
+}
+
+// Оболочка =====================================================
+.wrapper {
+  width: 100%;
+  min-height: 100%;
+  overflow: hidden;
+}
+
+body {
+  font-family: $fontfamily;
+}
+
+.pts {
+  font-family: "PT Serif";
+}
+
+.bluebg {
+  position: relative;
+  overflow: hidden;
+
+  &::after {
+    content: '';
+    @include rotate(18deg);
+    position: absolute;
+    width: 35%;
+    height: 130%;
+    left: -50px;
+    top: -95px;
+    background-image: linear-gradient(198deg, #007397 0%, rgba(0, 115, 151, 0) 100%);
+  }
+}
+
+// Основной блок ==========================================================================================================
+
+
+// Подключение файлов стилей ==============================================================================================
+@import "header.scss";
+@import "mainblock.scss";
+@import "footer.scss";
